@@ -1,0 +1,32 @@
+.container{
+    box-sizing: border-box;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.bottom-sheet{
+    border: 1px solid grey;
+    width: 98%;
+    user-select: none;
+    position: fixed;
+    overflow-y: auto;
+    min-height: 100vh;
+    /* top: 90%; */
+    transition: ease-in 0.1s;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+
+.drag{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: beige;
+    height: fit-content;
+    border-radius: 20px 20px 0 0;
+    padding: 10px 0;
+}

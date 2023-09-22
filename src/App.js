@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import BottomSheet from "./Components/BottomSheet";
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handle_modal = (a) => {
+    setIsModalOpen(a);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BottomSheet handle_modal={handle_modal} />
     </div>
   );
 }
